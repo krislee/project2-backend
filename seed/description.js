@@ -36,7 +36,7 @@ const test = async () => {
         // console.log(place._id)
         oneDescription.place = place._id 
         const addedDescription = await Description.create(oneDescription)
-        await place.describe.push(addedDescription._id)
+        await place.content.push(addedDescription._id)
         await place.save()
         // console.log(place)
         // console.log(oneDescription)
