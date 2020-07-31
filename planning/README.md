@@ -23,13 +23,13 @@ The project will be using MongoDB Atlas and Mongoose to store data in database a
 
 ## Wireframes
 
-- [Mobile](https://res.cloudinary.com/dhiwn0i0g/image/upload/v1596167661/IMG_0103_caylvc.png)
-- [Tablet](https://res.cloudinary.com/dhiwn0i0g/image/upload/v1596167642/IMG_0102_ywkjlz.png)
-- [Desktop](https://res.cloudinary.com/dhiwn0i0g/image/upload/v1596167642/IMG_0102_ywkjlz.png)
+- [Mobile](https://res.cloudinary.com/dhiwn0i0g/image/upload/v1596169417/IMG_0103_eukewy.png)
+- [Tablet](https://res.cloudinary.com/dhiwn0i0g/image/upload/v1596169416/IMG_0102_oxoxnb.png)
+- [Desktop](https://res.cloudinary.com/dhiwn0i0g/image/upload/v1596169416/IMG_0102_oxoxnb.png)
 
 ## Time/Priority Matrix 
 
-[Time Matrix](https://res.cloudinary.com/dhiwn0i0g/image/upload/v1596167660/IMG_0104_zgizx5.png) 
+[Time Matrix](https://res.cloudinary.com/dhiwn0i0g/image/upload/v1596169579/IMG_0104_ikhahb.png) 
 
 ### MVP/PostMVP - 5min 
 
@@ -55,7 +55,6 @@ The project will be using MongoDB Atlas and Mongoose to store data in database a
 | Routes | H | 10hr | -hr | -hr|
 | Test Routes | H | 3hr| -hr | -hr |
 | Deployment| H | 3hr | hr | -hr|
-
 | Total | H | 21hrs| -hrs | -hrs |
 
 #### PostMVP
@@ -63,7 +62,6 @@ The project will be using MongoDB Atlas and Mongoose to store data in database a
 | --- | :---: |  :---: | :---: | :---: |
 | Add model for log-in | M | 3hr | -hr | -hr|
 | Add routes for log-in| M | 10hr | -hr | -hr|
-
 | Total | H | 13hrs| -hrs | -hrs |
 
 ## Additional Libraries
