@@ -25,7 +25,7 @@ The project will be using MongoDB Atlas and Mongoose to store data in database a
 
 - [Mobile](https://res.cloudinary.com/dhiwn0i0g/image/upload/v1596169417/IMG_0103_eukewy.png)
 - [Tablet](https://res.cloudinary.com/dhiwn0i0g/image/upload/v1596169416/IMG_0102_oxoxnb.png)
-- [Desktop](https://res.cloudinary.com/dhiwn0i0g/image/upload/v1596169416/IMG_0102_oxoxnb.png)
+- [Desktop](hhttps://res.cloudinary.com/dhiwn0i0g/image/upload/v1596169416/IMG_0102_oxoxnb.png)
 
 ## Time/Priority Matrix 
 
@@ -55,14 +55,16 @@ The project will be using MongoDB Atlas and Mongoose to store data in database a
 | Routes | H | 10hr | -hr | -hr|
 | Test Routes | H | 3hr| -hr | -hr |
 | Deployment| H | 3hr | hr | -hr|
-| Total | H | 21hrs| -hrs | -hrs |
+| Total| H | 21hr | hr | -hr|
+
 
 #### PostMVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Add model for log-in | M | 3hr | -hr | -hr|
 | Add routes for log-in| M | 10hr | -hr | -hr|
-| Total | H | 13hrs| -hrs | -hrs |
+| Total| H | 13hr | -hr | -hr|
+
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project. 
