@@ -2,7 +2,7 @@ const {Schema, model} = require('mongoose')
 
 const headingSchema = new Schema({
     author: String,
-    date: Date,
+    createdOn: Date,
     destination: String,
     image: String,
     description: [{type: Schema.Types.ObjectId, ref: 'description'}]

@@ -1,13 +1,14 @@
 const {Schema, model} = require('mongoose')
 
 const descriptionSchema = new Schema ({
-    places: String,
-    foods: String,
+    landmark: [String],
+    restaurant: [String],
     paragraph: String,
     favoriteMemory: String,
     leastFavoriteMemory: String,
     rating: Number,
-    recommend: Boolean
+    recommend: Boolean,
+    image: String
 })
 
 module.exports = model('description', descriptionSchema)
