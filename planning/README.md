@@ -25,7 +25,7 @@ The project will be using MongoDB Atlas and Mongoose to store data in database a
 
 - [Mobile](https://res.cloudinary.com/dhiwn0i0g/image/upload/v1596169417/IMG_0103_eukewy.png)
 - [Tablet](https://res.cloudinary.com/dhiwn0i0g/image/upload/v1596169416/IMG_0102_oxoxnb.png)
-- [Desktop](hhttps://res.cloudinary.com/dhiwn0i0g/image/upload/v1596169416/IMG_0102_oxoxnb.png)
+- [Desktop](https://res.cloudinary.com/dhiwn0i0g/image/upload/v1596169416/IMG_0102_oxoxnb.png)
 
 ## Time/Priority Matrix 
 
