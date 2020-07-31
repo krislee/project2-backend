@@ -29,29 +29,6 @@ const seedDescription = [
         rating: 8
     }
 ]
-
-// const addSeed = async () => {
-//     await Promise.all(seedDescription.map(async (description) => {
-//         const emptyCollection = Description.deleteMany({})
-//         const place = await Heading.find({destination: description.place})
-//         description.place = place._id
-//         const newDescription = await Description.create(description)
-//         console.log(newDescription)
-//         // await place.describe.push(newDescription._id)
-//         // await place.save()
-//     }))
-//     mongoose.connection.close()
-// }
-
-// addSeed()
-
-// const addSeed = async () => {
-//     Description.deleteMany({})
-//     const create = await Description.insertMany(seedDescription)
-//     mongoose.connection.close()
-// }
-// addSeed()
-
 const test = async () => {
     await Description.deleteMany({})
     await Promise.all(seedDescription.map(async (oneDescription) => {
@@ -68,3 +45,20 @@ const test = async () => {
     mongoose.connection.close()
 }
 test()
+
+// const addSeed = async () => {
+//     await Promise.all(seedDescription.map(async (description) => {
+//         const emptyCollection = Description.deleteMany({})
+//         const place = await Heading.find({destination: description.place})
+//         description.place = place._id
+//         const newDescription = await Description.create(description)
+//         console.log(newDescription)
+//         // await place.describe.push(newDescription._id)
+//         // await place.save()
+//     }))
+//     mongoose.connection.close()
+// }
+
+// addSeed()
+
+

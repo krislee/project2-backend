@@ -1,6 +1,7 @@
 const {Schema, model} = require('mongoose')
 
 const headingSchema = new Schema({
+    name: String,
     createdOn: Date,
     destination: String,
     image: String,
