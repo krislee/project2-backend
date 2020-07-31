@@ -1,18 +1,19 @@
-const db = require('./index')
-const Description = require('../model/description')
+const db = require('../db/index')
+const Description = require('../model/description');
+const mongoose = require('../db/index');
 
-const descriptionSchema = new Schema ({
-    landmarks: [String],
-    restaurants: [String],
-    paragraph: String,
-    favoriteMemory: String,
-    leastFavoriteMemory: String,
-    rating: Number,
-    recommend: Boolean,
-    image: String
-})
+// const descriptionSchema = new Schema ({
+//     landmark: [String],
+//     restaurant: [String],
+//     paragraph: String,
+//     favoriteMemory: String,
+//     leastFavoriteMemory: String,
+//     rating: Number,
+//     recommend: Boolean,
+//     image: String
+// })
 
-const seedDescriptions = [
+const seedDescription = [
     {
         landmark: ["Empire State Building", "5th Ave"],
         restaurant: ["Pommes frites", "Carmine's", "Del Frisco's Double Eagle Steakhouse"],
@@ -45,3 +46,11 @@ const seedDescriptions = [
     }
 ]
 
+Description.insertMany(seedDescription, (error,response) => {
+    if (error) {
+        console.log(error);
+    } else {
+        console.log(response);
+    }
+    mongoose.connection.close()
+})
