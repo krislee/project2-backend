@@ -1,4 +1,5 @@
-const {Schema, model} = require('mongoose')
+const db = require('./index')
+const Description = require('../model/description')
 
 const descriptionSchema = new Schema ({
     places: String,
@@ -10,4 +11,7 @@ const descriptionSchema = new Schema ({
     recommend: Boolean
 })
 
-module.exports = model('description', descriptionSchema)
+const seedDescriptions = [
+    {}
+]
+
