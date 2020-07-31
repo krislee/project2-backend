@@ -1,5 +1,5 @@
 ## Project Description
 
-The project will center on a blog for one author. The blog author can create new blogs and update existing blogs. The homepage will display the most current blog, while users can access all the blogs in the navigation bar.
+This project is built with CRUD functionalities of a travel journal API. It will consist of 2 models, labeled heading and description. These models will mirror the front-end portion of heading and body content. There will be routes will handle request of showing all blogs, one blog at a time, updating a blog, and making a new blog.
 
-The back-end is built with NodeJS, Express, MongoDB and Mongoose, while the front-end is built with HTML, CSS, and jQuery.The project is deployed on Heroku for the server application and Netlify for hosting the project.
+The project uses MongoDB Atlas and Mongoose to store the journal entries data in the database, and Heroku and Node.js for the server application. 

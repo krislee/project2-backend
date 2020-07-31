@@ -13,19 +13,9 @@
 
 ## Project Description
 
-The project will center on a blog for one author. The blog author can create new blogs and update existing blogs. The homepage will display the most current blog, while users can access all the blogs in the navigation bar.
+This project is built with CRUD functionalities of a travel journal API. It will consist of 2 models, labeled heading and description. These models will mirror the front-end portion of heading and body content. There will be routes will handle request of showing all blogs, one blog at a time, updating a blog, and making a new blog.
 
-The project will be using MongoDB Atlas and Mongoose to store data in database and Heroku for server application. The project will be hosted on Netlify platform. jQuery will be used on the to render the data on HTML page.
-
-## Google Sheet
-
-[Google Sheet](https://docs.google.com/spreadsheets/d/1DRhpnHYU-LVnRYKSALXm_xbMCZ3FsTs6Zl-VJ1MU49E/edit#gid=0) 
-
-## Wireframes
-
-- [Mobile](https://res.cloudinary.com/dhiwn0i0g/image/upload/v1596169417/IMG_0103_eukewy.png)
-- [Tablet](https://res.cloudinary.com/dhiwn0i0g/image/upload/v1596169416/IMG_0102_oxoxnb.png)
-- [Desktop](https://res.cloudinary.com/dhiwn0i0g/image/upload/v1596169416/IMG_0102_oxoxnb.png)
+The project uses MongoDB Atlas and Mongoose to store the journal entries data in the database, and Heroku and Node.js for the server application. 
 
 ## Time/Priority Matrix 
 
