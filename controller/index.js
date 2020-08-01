@@ -49,8 +49,9 @@ const post = async (req, res) => {
         // console.log(req.body)
         const newHeading = await Heading.create(req.body[0])
         const newContent = await Description.create(req.body[1])
+        console.log(newContent)  
         await Promise.all([newHeading, newContent])
-            
+         console.log(newContent)   
         // await newContent.place.push(newHeading._id)
         // await newContent.save()
         // await newHeading.content.push(newContent._id)
@@ -64,6 +65,8 @@ const post = async (req, res) => {
     }
 }
 
+/* also try console logging newContent after each line then allContent before the res.json 
+to see what the data looks like as the function progresses and whether it's what you think it is */
 
 // DELETE HEADING
 const deleteHeading = async (req, res) => {
