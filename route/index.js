@@ -1,7 +1,7 @@
 const {Router} = require('express')
 const router = Router()
 
-const {index, show, putHeading, putContent, post, deleteHeading, deleteContent} = require('../controller/index')
+const {index, show, putHeading, putContent, post, deleteHeading} = require('../controller/index')
 
 router.get('/', index)
 
@@ -13,8 +13,8 @@ router.put('/content/:id', putContent)
 
 router.post('/', post)
 
-router.delete('/heading/:id', deleteHeading)
+router.delete('/:id', deleteHeading)
 
-router.delete('/content/:id', deleteContent)
+// router.delete('/content/:id', deleteContent)
 
 module.exports = router

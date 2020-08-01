@@ -27,7 +27,7 @@ const show = async (req, res) => {
 // UPDATE BLOG + HEADING DESCRIPTION
 const putContent = async (req, res) => {
     try {
-        const updateContent = await Description.findByIdAndUpdate(req.params.id, req.body, {new:true}).populate('content')
+        const updateContent = await Description.findByIdAndUpdate(req.params.id, req.body, {new:true})
         res.status(200).json(updateContent)
     } catch(error) {
         res.status(400).send(error)
@@ -49,7 +49,7 @@ const post = async (req, res) => {
         // console.log(req.body)
         const newHeading = await Heading.create(req.body[0]) // newHeading._id for redirect to only show one blog
         const newContent = await Description.create(req.body[1])
-        
+        newContent.save()
         await newContent.place.push(newHeading._id)
         await newContent.save()
         await newHeading.content.push(newContent._id)
@@ -68,6 +68,7 @@ const post = async (req, res) => {
 const deleteHeading = async (req, res) => {
     try {
         const deleteHeading = await Heading.findByIdAndDelete(req.params.id)
+        const deleteContent = await Description.findByIdAndDelete(deleteHeading.content)
         const allContent = await Heading.find().populate('content')
         res.status(200).json(allContent)
     } catch(error) {
@@ -76,14 +77,14 @@ const deleteHeading = async (req, res) => {
 }
 
 // DELETE CONTENT
-const deleteContent = async (req,res) => {
-    try {
-        const deleteContent = await Description.findByIdAndDelete (req.params.id)
-        const allContent = await Heading.find().populate('content')
-        res.status(200).json(allContent)
-    } catch(error) {
-        res.status(400).send(error)
-    }
-}
+// const deleteContent = async (req,res) => {
+//     try {
+//         const deleteContent = await Description.findByIdAndDelete (req.params.id)
+//         const allContent = await Heading.find().populate('content')
+//         res.status(200).json(allContent)
+//     } catch(error) {
+//         res.status(400).send(error)
+//     }
+// }
 
-module.exports = {index, show, putHeading, putContent, post, deleteHeading, deleteContent}
+module.exports = {index, show, putHeading, putContent, post, deleteHeading}
