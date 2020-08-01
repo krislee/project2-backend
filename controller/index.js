@@ -55,10 +55,10 @@ const post = async (req, res) => {
             const newContent = await Description.create(req.body[1])
             return newContent
         }
-
-        heading().content.push(content()._id)
-        content().place.push(heading()._id)
         
+        heading().content.push(content._id)
+        content().place.push(heading._id)
+
         // Below only created the heading and description, ids were not pushed
         // const [heading1, content1] = await Promise.all([heading(), content()])
         // const x = await heading1.content.push(content1)
@@ -75,8 +75,8 @@ const post = async (req, res) => {
         // Below doesn't work, only creates the heading:
         // await Promise.all([await Heading.create(req.body[0]), await Description.create(req.body[1])])
 
-        const allContent = await Heading.find().populate('content')
-        res.status(200).json(allContent)
+        // const allContent = await Heading.find().populate('content')
+        res.status(200).json(heading().content)
         
     } catch(error) {
         res.status(400).send(error)
