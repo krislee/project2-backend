@@ -47,25 +47,27 @@ const putHeading = async (req, res) => {
 const post = async (req, res) => {
     try {
         // console.log(req.body)
-        async function heading () {
-            const newContent = await Description.create(req.body[1])
-            return newContent
-        }
-        async function content (){
+        async function heading (){
             const newHeading = await Heading.create(req.body[0])
+            const headingID= await newHeading.content.push(content()._id)
+            headingID.save()
             return newHeading
         }
+
+        async function content () {
+            const newContent = await Description.create(req.body[1])
+            const contentID = await newContent.place.push(heading()._id)
+            contentID.save()
+            return newContent
+        }
         
-        // heading()
-        // content()
+        heading()
+        content()
         
         // console.log(newContent)  
         
         //  console.log(newContent)   
-       const contentID = await content().place.push(content()._id)
-       contentID.save()
-       const headingID= await heading().content.push(heading()._id)
-       headingID.save()
+       
         // await heading().save()
 
         const allContent = await Heading.find().populate('content')
