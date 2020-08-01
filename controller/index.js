@@ -56,16 +56,15 @@ const post = async (req, res) => {
             return newHeading
         }
         
-        heading()
-        content()
+        // heading()
+        // content()
         
         // console.log(newContent)  
         
         //  console.log(newContent)   
-        await content().place.push(newHeading._id)
-        await content().save()
-        await heading().content.push(newContent._id)
-        await heading().save()
+        await content().place.push(newHeading._id).save()
+        await heading().content.push(newContent._id).save()
+        // await heading().save()
 
         const allContent = await Heading.find().populate('content')
         res.status(200).json(allContent)
