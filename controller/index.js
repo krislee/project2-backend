@@ -46,29 +46,24 @@ const putHeading = async (req, res) => {
 // CREATE BLOG
 const post = async (req, res) => {
     try {
-        // console.log(req.body)
-        async function heading (){
-            const newHeading = await Heading.create(req.body[0])
-            const headingID= await newHeading.content.push(content()._id)
-            headingID.save()
-            return newHeading
-        }
+        // async function heading (){
+        //     const newHeading = await Heading.create(req.body[0])
+        //     const headingID= await newHeading.content.push(content()._id)
+        //     headingID.save()
+        //     return newHeading
+        // }
 
-        async function content () {
-            const newContent = await Description.create(req.body[1])
-            const contentID = await newContent.place.push(heading()._id)
-            contentID.save()
-            return newContent
-        }
+        // async function content () {
+        //     const newContent = await Description.create(req.body[1])
+        //     const contentID = await newContent.place.push(heading()._id)
+        //     contentID.save()
+        //     return newContent
+        // }
         
-        heading()
-        content()
-        
-        // console.log(newContent)  
-        
-        //  console.log(newContent)   
-       
-        // await heading().save()
+        // heading()
+        // content()
+
+        await Promise.all([await Heading.create(req.body[0]), await Description.create(req.body[1])])
 
         const allContent = await Heading.find().populate('content')
         res.status(200).json(allContent)
