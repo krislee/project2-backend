@@ -63,9 +63,9 @@ const post = async (req, res) => {
         
         //  console.log(newContent)   
        const contentID = await content().place.push(content()._id)
-       content.save()
+       contentID.save()
        const headingID= await heading().content.push(heading()._id)
-       heading.save()
+       headingID.save()
         // await heading().save()
 
         const allContent = await Heading.find().populate('content')
