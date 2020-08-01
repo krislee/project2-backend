@@ -56,6 +56,8 @@ const post = async (req, res) => {
             return newHeading
         }
         
+        heading()
+        content()
         
         // console.log(newContent)  
         
