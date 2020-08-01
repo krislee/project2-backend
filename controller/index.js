@@ -46,23 +46,27 @@ const putHeading = async (req, res) => {
 // CREATE BLOG
 const post = async (req, res) => {
     try {
-        async function heading (){
+       const heading = async () => {
             const newHeading = await Heading.create(req.body[0])
-            // newHeading.content.push()
-            return newHeading
+            return newHeading._id
         }
 
-        async function content () {
-            const newContent = Description.create(req.body[1])
-            return newContent
+        const content = async () => {
+            const newContent = await Description.create(req.body[1])
+            return newContent._id
         }
         
-        heading()
-        content()
-        const headingID= await heading().content.push(content()._id)
-        await headingID.save()
-        const contentID = await content().place.push(heading()._id)
-        await contentID.save()
+        const [heading1, content1] = await Promise.all([heading(), content()])
+        const x = await heading1.content.push(content1)
+        await x.save()
+        const y = await content1.content.push(heading)
+        await y.save()
+        
+        // Below ran heading() once more but not content()
+        // const headingID= await heading().content.push(content()._id)
+        // await headingID.save()
+        // const contentID = await content().place.push(heading()._id)
+        // await contentID.save()
 
         // Below doesn't work, only creates the heading:
         // await Promise.all([await Heading.create(req.body[0]), await Description.create(req.body[1])])
