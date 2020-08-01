@@ -47,11 +47,12 @@ const putHeading = async (req, res) => {
 const post = async (req, res) => {
     try {
         // console.log(req.body)
-        const newHeading = await Heading.create(req.body[0])
         const newContent = await Description.create(req.body[1])
-        console.log(newContent)  
+        const newHeading = await Heading.create(req.body[0])
+        
+        // console.log(newContent)  
         await Promise.all([newHeading, newContent])
-         console.log(newContent)   
+        //  console.log(newContent)   
         // await newContent.place.push(newHeading._id)
         // await newContent.save()
         // await newHeading.content.push(newContent._id)
