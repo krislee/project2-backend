@@ -16,7 +16,7 @@ const index = async (req, res) => {
 // GET ONE BLOG
 const show = async (req, res) => {
     try {
-        const onePost = (await Heading.findOne(req.params.id)).populate('content')
+        const onePost = await Heading.findById(req.params.id).populate('content')
         res.status(200).json(allPosts)
     } catch(error) {
         res.status(400).send(error)
@@ -24,18 +24,24 @@ const show = async (req, res) => {
 }
 
 
-// UPDATE BLOG DESCRIPTION
-const put = async (req, res) => {
+// UPDATE BLOG + HEADING DESCRIPTION
+const putContent = async (req, res) => {
     try {
-
+        const updateContent = await Heading.findByIdAndUpdate(req.params.id, req.body, {new:true}).populate('content')
+        res.status(200).json(updateContent)
     } catch(error) {
         res.status(400).send(error)
     }
 }
 
-// UPDATE HEADING DESCRIPTION
-
-
+const putHeading = async (req, res) => {
+    try {
+        const updateHeading = await Description.findByIdAndUpdate(req.params.id, req.body, {new:true}).populate('content')
+        res.status(200).json(updateHeading)
+    } catch(error) {
+        res.status(400).send(error)
+    }
+}
 
 // CREATE BLOG
 const post = async (req, res) => {
@@ -61,4 +67,4 @@ const post = async (req, res) => {
 // DELETE BLOG
 
 
-module.exports = {index, post}
+module.exports = {index, putHeading, putContent, post}
