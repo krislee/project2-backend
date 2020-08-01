@@ -47,13 +47,16 @@ const putHeading = async (req, res) => {
 const post = async (req, res) => {
     try {
         // console.log(req.body)
-        const newHeading = await Heading.create(req.body[0]) // newHeading._id for redirect to only show one blog
-        const newContent = await Description.create(req.body[1])
-        newContent.save()
-        await newContent.place.push(newHeading._id)
-        await newContent.save()
-        await newHeading.content.push(newContent._id)
-        await newHeading.save()
+        const newHeading = await Heading.create(req.body[0]) 
+        async function test (req,res) {
+            const newContent = await Description.create(req.body[1])
+            return newContent
+        }
+        test()
+        // await newContent.place.push(newHeading._id)
+        // await newContent.save()
+        // await newHeading.content.push(newContent._id)
+        // await newHeading.save()
 
         const allContent = await Heading.find().populate('content')
         res.status(200).json(allContent)
