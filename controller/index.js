@@ -62,9 +62,9 @@ const post = async (req, res) => {
         // console.log(newContent)  
         
         //  console.log(newContent)   
-       const content = await content().place.push(content()._id)
+       const contentID = await content().place.push(content()._id)
        content.save()
-       const heading = await heading().content.push(heading()._id)
+       const headingID= await heading().content.push(heading()._id)
        heading.save()
         // await heading().save()
 
