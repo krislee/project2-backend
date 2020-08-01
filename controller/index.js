@@ -73,10 +73,6 @@ const post = async (req, res) => {
     }
 }
 
-
-/* also try console logging newContent after each line then allContent before the res.json 
-to see what the data looks like as the function progresses and whether it's what you think it is */
-
 // DELETE HEADING
 const deleteHeading = async (req, res) => {
     try {
@@ -89,53 +85,4 @@ const deleteHeading = async (req, res) => {
     }
 }
 
-// DELETE CONTENT
-// const deleteContent = async (req,res) => {
-//     try {
-//         const deleteContent = await Description.findByIdAndDelete (req.params.id)
-//         const allContent = await Heading.find().populate('content')
-//         res.status(200).json(allContent)
-//     } catch(error) {
-//         res.status(400).send(error)
-//     }
-// }
-
 module.exports = {index, show, putHeading, putContent, post, deleteHeading}
-
-//ORIGINAL CODE:
-// CREATE BLOG
-// const post = async (req, res) => {
-//     try {
-//         const newHeading = await Heading.create(req.body[0]) // newHeading._id for redirect to only show one blog
-//         const newContent = await Description.create(req.body[1])
-        
-//         await newContent.place.push(newHeading._id)
-//         await newContent.save()
-//         await newHeading.content.push(newContent._id)
-//         await newHeading.save()
-
-//         const allContent = await Heading.find().populate('content')
-//         res.status(200).json(allContent)
-        
-//     } catch(error) {
-//         res.status(400).send(error)
-//     }
-// }
-//Below only created heading and description, ids not pushed:
-
-
-//  // Below only created the heading and description, ids not pushed
-//     const [heading1, content1] = await Promise.all([heading(), content()])
-//     const x = await heading1.content.push(content1)
-//     await x.save()
-//     const y = await content1.content.push(heading)
-//     await y.save()
-   
-// // Below ran heading() once more but not content()
-//     const headingID= await heading().content.push(content()._id)
-//     await headingID.save()
-//     const contentID = await content().place.push(heading()._id)
-//     await contentID.save()
-
-// // Below doesn't work, only creates the heading:
-//     await Promise.all([await Heading.create(req.body[0]), await Description.create(req.body[1])])
