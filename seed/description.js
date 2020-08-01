@@ -5,7 +5,7 @@ const mongoose = require ('mongoose')
 
 const seedDescription = [
     {
-        place: "New York",
+        // place: "New York",
         landmark: ["Empire State Building", "5th Ave"],
         restaurant: ["Pommes frites", "Carmine's", "Del Frisco's Double Eagle Steakhouse"],
         favoriteMemory: "NY was such a shining bright city! It was so fun to be a tourist in a busy city because I get to experience the fast pace. My favorite part was going on top of the Empire State Building",
@@ -13,7 +13,7 @@ const seedDescription = [
         rating: 8
     },
     {
-        place: "South Korea",
+        // place: "South Korea",
         landmark: ["Namsan Seoul Tower", "Nami Island", "Changdeokgung"],
         restaurant: ["Jungsik Seoul", "Jingu Hoegwan", "Hadongkwan"],
         favoriteMemory: "South Korea displayed both its historic and modern side. I visited old palaces that kings would live in, and went to the hipster Incheon area. It was great to see the city sparkled at night on top of the N Seoul Tower.",
@@ -21,7 +21,7 @@ const seedDescription = [
         rating: 9
     },
     {
-        place: "London",
+        // place: "London",
         landmark: ["Tower of London", "Buckingham Palance", "Big Ben"],
         restaurant: ["Amrutha Lounge", "Andy's Greek Taverna", "Core by Clare Smyth"],
         favoriteMemory: "It was nice to learn about the history of London through visiting musuems and the palace. Getting around through the iconic double-decker buses - very vintage vibe.",
@@ -46,19 +46,11 @@ const test = async () => {
 }
 test()
 
-// const addSeed = async () => {
-//     await Promise.all(seedDescription.map(async (description) => {
-//         const emptyCollection = Description.deleteMany({})
-//         const place = await Heading.find({destination: description.place})
-//         description.place = place._id
-//         const newDescription = await Description.create(description)
-//         console.log(newDescription)
-//         // await place.describe.push(newDescription._id)
-//         // await place.save()
-//     }))
+// const addDescriptionSeed = async () => {
+//     await Description.deleteMany({})
+//     await Description.insertMany(seedDescription)
 //     mongoose.connection.close()
 // }
 
-// addSeed()
 
-
+// addDescriptionSeed()
