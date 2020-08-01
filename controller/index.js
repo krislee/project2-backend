@@ -47,7 +47,8 @@ const putHeading = async (req, res) => {
 const post = async (req, res) => {
     try {
         async function heading (){
-            const newHeading = Heading.create(req.body[0])
+            const newHeading = await Heading.create(req.body[0])
+            // newHeading.content.push()
             return newHeading
         }
 
@@ -59,9 +60,9 @@ const post = async (req, res) => {
         heading()
         content()
         const headingID= await heading().content.push(content()._id)
-        headingID.save()
+        await headingID.save()
         const contentID = await content().place.push(heading()._id)
-        contentID.save()
+        await contentID.save()
 
         // Below doesn't work, only creates the heading:
         // await Promise.all([await Heading.create(req.body[0]), await Description.create(req.body[1])])
