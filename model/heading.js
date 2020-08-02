@@ -5,7 +5,7 @@ const headingSchema = new Schema({
     createdOn: Date,
     destination: String,
     image: String,
-    content: {type: Schema.Types.ObjectId, ref: 'description'}
+    content: [{type: Schema.Types.ObjectId, ref: 'description'}]
 })
 
 module.exports = model('heading', headingSchema)
