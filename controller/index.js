@@ -65,7 +65,7 @@ const post = async (req, res) => {
         console.log(heading1)
         console.log(content1)
 
-        const allContent = await Heading.find().populate('content')
+        const allContent = await Heading.findById(heading1._id).populate('content')
         res.status(200).json(allContent)
         
     } catch(error) {
