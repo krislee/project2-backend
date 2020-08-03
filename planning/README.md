@@ -6,7 +6,7 @@
 |---|---| ---|
 |Day 1| Project Description | Complete
 |Day 1| Wireframes / Priority Matrix / Timeline `backend` and `frontend`| Complete
-|Day 2| Working RestAPI | Incomplete
+|Day 2| Working RestAPI | Complete
 |Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Day 4| MVP & Bug Fixes | Incomplete
 |Day 5| Final Touches and Present | Incomplete
@@ -41,14 +41,14 @@ View front-end repo [here](https://github.com/krislee/project2-frontend)
 ## Functional Components
 
 #### MVP
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | 2 schemas | H | 2hr | 2hr | 2hr|
-| Seed data | H | 2hr | hr | hr|
-| Routes | H | 10hr | -hr | -hr|
-| Test Routes | H | 3hr| -hr | -hr |
-| Deployment| H | 3hr | hr | -hr|
-| Total| H | 21hr | hr | -hr|
+| Seed data | H | 2hr | 4hr | 4hr|
+| Routes | H | 10hr | 17hr | 17hr|
+| Test Routes | H | 3hr| 3hr | 3hr |
+| Deployment| H | 3hr | 6hr | 6hr|
+| Total| H | 21hr | 32hr | 32hr|
 
 
 #### PostMVP
