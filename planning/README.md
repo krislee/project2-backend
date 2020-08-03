@@ -17,6 +17,9 @@ This project is built with CRUD functionalities of a travel journal API. It will
 
 The project uses MongoDB Atlas and Mongoose to store the journal entries data in the database, and Heroku and Node.js for the server application. 
 
+## Frontend Repo
+View front-end repo [here](https://github.com/krislee/project2-frontend)
+
 ## Time/Priority Matrix 
 
 [Time Matrix](https://res.cloudinary.com/dhiwn0i0g/image/upload/v1596169579/IMG_0104_ikhahb.png) 
