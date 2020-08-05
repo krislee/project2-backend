@@ -27,7 +27,9 @@ const show = async (req, res) => {
 // UPDATE BLOG + HEADING DESCRIPTION
 const putContent = async (req, res) => {
     try {
+        // console.count()
         const updateContent = await Description.findByIdAndUpdate(req.params.id, req.body, {new:true})
+        // console.count()
         res.status(200).json(updateContent)
     } catch(error) {
         res.status(400).send(error)
