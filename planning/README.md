@@ -99,7 +99,7 @@ const post = async (req, res) => {
 ## Issues and Resolutions
 **ERROR**: Deployment to Heroku and MongoDB Atlas did not allow for proper references between the created documents from the heading and content collections. 
 
-**RESOLUTION**: The mongoURI needed to include the 
+**RESOLUTION**: The mongoURI needed to include the j=true&wtimeout=1000 at the end of Heroku URL.
 
 ## Previous Project Worksheet
  - [Readme's](https://github.com/jkeohan/fewd-class-repo/tree/master/final-project-worksheet/project-worksheet-examples)
