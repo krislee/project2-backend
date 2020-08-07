@@ -62,7 +62,6 @@ View front-end repo [here](https://github.com/krislee/project2-frontend)
 ## Additional Libraries
 - Mongoose is used to connect NodeJS to MongoDB. 
 - Morgan is used to log any errors encountered
-- CORS used to provide whitelist
 
 ## Code Snippet
 In order to reference documents from different collections, there needed to be a way to obtain the ObjectIds of the documents from the different collections. To do so, the POST route was created so that right after making the documents from the different collections, we will immediately push the ObjectIds of the newly created documents to wherever the reference by ObjectId was in the schema. Below is an example that shows the heading document getting the ObjectId of the content document, and the content document getting the ObjectId of the heading document:
